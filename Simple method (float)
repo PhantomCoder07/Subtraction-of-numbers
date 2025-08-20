@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+    float a,b,sub;
+    printf ("Enter two integer: ");
+    scanf ("%f %f",&a,&b);
+    sub=a-b;
+    printf ("Subtraction of two numbers: %.2f\n",sub);
+    return 0;
+}
