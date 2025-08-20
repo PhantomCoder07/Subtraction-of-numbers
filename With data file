@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    FILE *file1,*file2;
+    float a,b,sub;
+    char ch;
+    file1 = fopen ("Sum.txt","w");
+    file2 = fopen ("Sum.txt","r");
+    if (file1==NULL)
+        printf ("File does not exists.");
+    else
+    {
+        printf ("Enter two numbers: ");
+        scanf ("%f %f",&a,&b);
+        sub=a-b;
+        fprintf (file1,"The sub of two number is: %.2f\n",sub);
+        fclose (file1);
+    }
+    if (file2==NULL)
+        printf ("File does not exists");
+    else
+    {
+        while (!feof(file2))
+        {
+            ch = fgetc (file2);
+            printf ("%c",ch);
+        }
+        fclose (file2);
+    }
+    return 0;
+}
