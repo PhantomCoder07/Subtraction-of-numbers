@@ -1,0 +1,13 @@
+#include <stdio.h>
+int sub (int a, int b)
+{
+    return a-b;
+}
+int main()
+{
+    int a,b;
+    printf("Enter two numbers: ");
+    scanf("%d %d",&a,&b);
+    printf("Sum of two numbers: %d\n",sub(a,b));
+    return 0;
+}
