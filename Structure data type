@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct add
+{
+    float value;
+};
+int main()
+{
+    int i,n;
+    float sub;
+    printf ("Enter limit of input numbers: ");
+    scanf ("%d",&n);
+    struct add s[n];
+    printf("Enter first positive number: ");
+    scanf("%f",&s[0].value);
+    sub=s[0].value;
+    printf ("Enter %d negative numbers: ",n-1);
+    for (i=1; i<n; i++)
+    {
+        scanf ("%f",&s[i].value);
+        sub-=s[i].value;
+    }
+    printf ("The sub of numbers: %.2f",sub);
+    return 0;
+}
